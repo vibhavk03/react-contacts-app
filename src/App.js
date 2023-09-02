@@ -1,10 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import NewContactForm from './components/NewContactForm';
 import ContactList from './components/ContactList';
 
 function App() {
-  const [contactList, setContactList] = useState([]);
+  const [contactList, setContactList] = useState(() => {
+    const localValue = localStorage.getItem('CONTACT_LIST');
+    if (localValue == null) {
+      return [];
+    } else {
+      return JSON.parse(localValue);
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem('CONTACT_LIST', JSON.stringify(contactList));
+  }, [contactList]);
 
   const addContact = (contact) => {
     const { name, phone, email } = contact;
@@ -21,7 +32,7 @@ function App() {
     });
   };
 
-  console.log('(((((((((((()))))))))))))', contactList);
+  // console.log('(((((((((((()))))))))))))', contactList);
 
   return (
     <div className="app-container">
