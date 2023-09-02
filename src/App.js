@@ -58,13 +58,14 @@ function App() {
       <div>
         <h1>📒 Contact App</h1>
       </div>
-      <input
-        type="text"
-        value={searchQuery}
-        placeholder="Search..."
-        className="search-box"
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
+      <div className="search-box-div flex">
+        <input
+          type="text"
+          value={searchQuery}
+          placeholder="Search..."
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
       <NewContactForm onSubmit={addContact} />
       <ContactList
         contactList={search(contactList)}
