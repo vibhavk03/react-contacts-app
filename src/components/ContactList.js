@@ -16,7 +16,7 @@ export default function ContactList(props) {
         </thead>
         <tbody>
           {contactList.map((contact) => {
-            return <ContactRow contact={contact} />;
+            return <ContactRow key={contact.id} contact={contact} />;
           })}
         </tbody>
       </table>
