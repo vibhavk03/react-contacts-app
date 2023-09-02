@@ -7,18 +7,21 @@ function App() {
   const [contactList, setContactList] = useState([]);
 
   const addContact = (contact) => {
+    const { name, phone, email } = contact;
     setContactList((currentContactList) => {
       return [
         ...currentContactList,
         {
           id: crypto.randomUUID(),
-          name: contact,
+          name,
+          phone,
+          email,
         },
       ];
     });
   };
 
-  // console.log('(((((((((((()))))))))))))', contactList);
+  console.log('(((((((((((()))))))))))))', contactList);
 
   return (
     <div className="app-container">
