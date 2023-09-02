@@ -1,7 +1,7 @@
 import ContactRow from './ContactRow';
 
 export default function ContactList(props) {
-  const { contactList } = props;
+  const { contactList, deleteContact } = props;
   return (
     <div className="contact-list-container flex">
       <table>
@@ -10,12 +10,18 @@ export default function ContactList(props) {
             <th>🐲 Name</th>
             <th>📞 Phone</th>
             <th>📧 Email</th>
-            <th>🗑️ Delete</th>
+            <th className="center-text">🗑️ Delete</th>
           </tr>
         </thead>
         <tbody>
           {contactList.map((contact) => {
-            return <ContactRow key={contact.id} contact={contact} />;
+            return (
+              <ContactRow
+                key={contact.id}
+                contact={contact}
+                deleteContact={deleteContact}
+              />
+            );
           })}
         </tbody>
       </table>

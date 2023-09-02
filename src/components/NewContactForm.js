@@ -51,7 +51,7 @@ export default function NewContactForm(props) {
           <input
             value={contactPhone.value}
             id="phone"
-            type="text"
+            type="number"
             placeholder="Phone"
             onChange={contactPhone.onChange}
             required

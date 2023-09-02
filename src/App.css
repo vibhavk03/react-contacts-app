@@ -135,6 +135,10 @@ tbody tr:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.delete-td {
+  cursor: pointer;
+}
+
 /* search styles */
 .search-box {
   width: 68%;

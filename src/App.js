@@ -35,6 +35,12 @@ function App() {
     });
   };
 
+  const deleteContact = (id) => {
+    setContactList((currentContactList) => {
+      return currentContactList.filter((contact) => contact.id !== id);
+    });
+  };
+
   /* this function will filter the contacts based on the search query */
   const keys = ['name', 'phone', 'email'];
   const search = (contactList) => {
@@ -50,7 +56,7 @@ function App() {
   return (
     <div className="app-container">
       <div>
-        <h1>Contact App</h1>
+        <h1>📒 Contact App</h1>
       </div>
       <input
         type="text"
@@ -60,7 +66,10 @@ function App() {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       <NewContactForm onSubmit={addContact} />
-      <ContactList contactList={search(contactList)} />
+      <ContactList
+        contactList={search(contactList)}
+        deleteContact={deleteContact}
+      />
     </div>
   );
 }
