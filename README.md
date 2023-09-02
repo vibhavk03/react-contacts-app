@@ -1,6 +1,6 @@
 # React Contact App Project
 
-Access this project live here --> https://vibhavk03.github.io/contacts-app/<br>
+Access this project live here --> https://vibhavk03.github.io/react-contacts-app/<br>
 
 ![](assets/screenshot.JPG)
 
