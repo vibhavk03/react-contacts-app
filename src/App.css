@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #edeef6;
+  background-color: #fff;
 }
 
 code {
@@ -81,7 +81,8 @@ code {
 .form-row input {
   padding: 8px 16px;
   border-radius: 6px;
-  border: none;
+  /* border: none; */
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .contact-list-container {
@@ -97,7 +98,6 @@ code {
   height: 60px;
   gap: 10px;
 }
-
 .contact-container-left {
   width: 20%;
   /* height: auto; */
@@ -106,4 +106,31 @@ code {
   width: 50px;
   height: 50px;
   object-fit: contain;
+}
+
+/* table styles */
+table {
+  margin-top: 20px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+  /* border-top: 2px solid #eceeef;
+  border-bottom: 2px solid #eceeef; */
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  /* border-top: 2px solid #eceeef;
+  border-bottom: 2px solid #eceeef; */
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+tbody tr:hover {
+  transition: 0.1s ease-out;
+  background-color: rgba(0, 0, 0, 0.1);
 }
