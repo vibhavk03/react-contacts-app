@@ -51,12 +51,10 @@ function App() {
     );
   };
 
-  // console.log('(((((((((((()))))))))))))', contactList);
-
   return (
     <div className="app-container">
       <div>
-        <h1>📒 Contact App</h1>
+        <h1>📒 Contacts App</h1>
       </div>
       <div className="search-box-div flex">
         <input
